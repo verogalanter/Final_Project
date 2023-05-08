@@ -11,6 +11,9 @@ tables = pd.read_html(
 
 table = tables[0]
 df = table[["Language", "Percentage of world population (2022)"]]
-df.plot(x = "Language", y = "Percentage of world population (2022)")
+print (df.info())
+df["Percent"]=df["Percentage of world population (2022)"].str.extract('(\d+)').astype(int)
+print (df.info())
+df.plot(x = "Language", y = "Percent")
 
 plt.show()
