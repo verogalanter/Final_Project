@@ -23,5 +23,7 @@ print (df.info())
 df.plot.bar(x = "Language", y = "Percent")
 #makes sure all ten languages are printing out
 plt.xticks(range(0, 10), ['English', 'Mandarin Chinese', 'Hindi', 'Spanish', 'French', 'Arabic', 'Bengali', 'Russian', 'Portuguese', 'Urdu'])
+#print title
+plt.title ('Major Languages Spoken by Population Proportion')
 #prints out final graph
 plt.show()
